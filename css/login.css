@@ -1,0 +1,73 @@
+.log_content{
+	position:fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	background: url(../images/login@3x.png);
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.logo{
+	margin-top: 25px;
+}
+.logo img{
+	width: 3rem;
+	display: block;
+	margin: auto;
+}
+.form-content{
+	margin: 25px;
+}
+.form-item{
+	display: flex;
+	width: 100%;
+	padding: .28rem 0;
+	border-bottom: 1px solid #fff;
+}
+.form-item .icon{
+	vertical-align: middle;
+}
+.form-item .icon img{
+	margin-top: .1rem;
+	width: .5rem;
+	height: .6rem;
+}
+.form-item .icon{
+	margin-right: 15px;
+}
+.form-item input{
+	width: 1%;
+	flex: 1;
+	height: .8rem;
+	background: inherit;
+	color: #fff;
+	font-size: 16px;
+}
+.verification{
+	padding: 0 10px;
+	border-radius: 10px ;
+	background: inherit;
+	color: #fff;
+	border:1px solid #fff;
+}
+.form-item-btn{
+	margin-top:25px;
+}
+.register{
+	width: 100%;
+	display: block;
+	height: .9rem;
+	background:rgba(255,162,0,1);
+	border-radius: 5px ; 	
+	color: #fff;
+}
+.copyright{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	padding-bottom: 10px;
+	text-align: center;
+	color: #fff;
+	font-size: 12px;
+}

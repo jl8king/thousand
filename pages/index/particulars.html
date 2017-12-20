@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<title>商品详情</title>
+	<link rel="stylesheet" href="../../css/style_h.css">
+	<script type="text/javascript" src="../../lib/js/rem.min.js"></script>
+</head>
+<body>
+	<header class="mui-bar mui-bar-nav">
+		<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left" onclick="window.history.back();"></a>
+		<h1 class="mui-title">商品详情</h1>
+	</header>
+	<div class="mui-content">
+		<div class="slider">
+			  <!-- Swiper -->
+			  <div class="swiper-container">
+			    <div class="swiper-wrapper">
+			      <div class="swiper-slide">
+						<img src="http://img3m3.ddimg.cn/27/28/60633963-1_e_4.jpg" alt="">
+			      </div>
+			      <div class="swiper-slide">Slide 2</div>
+			      <div class="swiper-slide">Slide 3</div>
+			    </div>
+			    <!-- Add Pagination -->
+			    <div class="swiper-pagination"></div>
+			  </div>
+		</div>
+		<div class="detail j_detail">
+			<div class="dangdang_icon">韩婵蜂胶水莹净肤黑面膜5片盒装韩婵蜂胶水莹净肤黑面膜5片盒装韩婵蜂胶水莹净肤黑面膜5片盒装 蜂胶提取物 温和滋养</div>
+			<div class="new_price_div">
+				<span class="min_price">¥268</span>
+				<span class="max_price">¥320</span>
+				<span>免邮费</span>
+			</div>
+			<div class="right_content">
+				<img src="http://img50.ddimg.cn/99999990000591790.jpg" alt="">
+			</div>
+		</div>
+	</div>
+	<footer class="purchase">
+		<button type="button">立即下单</button>
+	</footer>
+</body>
+</html>
+<script type="text/javascript" src="../../lib/js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="../../lib/layer/layer.js"></script>
+<script type="text/javascript" src="../../lib/swiper/js/swiper.min.js"></script>
+<script type="text/javascript">
+	var swiper = new Swiper('.swiper-container', {
+		pagination: {
+			el: '.swiper-pagination',
+			dynamicBullets: true,
+		},
+	});
+</script>

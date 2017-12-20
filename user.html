@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="renderer" content="webkit" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="format-detection" content="telephone=no" />
+	<title>个人中心</title>
+	<link rel="stylesheet" href="./css/style_j.css" />
+	<script type="text/javascript" src="./lib/js/rem.min.js"></script>
+	<style>
+		.mui-table-view-cell{
+			display: block;
+			padding: 11px 15px!important;
+		}
+		.fot-icon {
+		    width: 22px;
+		    height: 22px;
+		    display: block;
+		    margin: auto;
+		}
+		.mui-bar-tab .mui-tab-item.mui-active{
+		    color: #FFA300;
+		}
+		.mui-tab-label{
+		    font-size: 12px;
+		}
+		.layui-layer-btn .layui-layer-btn0{
+			background-color: #FFA300!important;
+			border-color:#FFA300!important;
+		}
+	</style>
+</head>
+<body>
+	<section style="padding-bottom: 60px">
+		<figure class="user_figure">
+			<div class="mui-table-view">
+				<div class="mui-table-view-cell mui-media user_top">
+					<a href="javascript:;" class="nav-a">
+						<img class="mui-pull-left" src="./images/xlbtx.png">
+						<div class="mui-media-body my-media-body">
+							<div class="my-user-left">
+								<div>13550739605</div>
+								<div class="user_shim">
+									<i style="font-size: .4rem;" class="fa fa-check-circle-o" aria-hidden="true"></i>
+									<span>已实名</span>
+								</div>
+							</div>
+							<div class="my-user-right btn_close">
+								退出登录
+							</div>
+						</div>
+					</a>
+				</div>
+			</div>
+			<div class="user_state">
+				<div>
+					<span>我的余额：</span>
+					<span>1000</span>
+				</div>
+				<div>
+					<span>提现中：</span>
+					<span>600</span>
+				</div>
+			</div>
+		</figure>
+		<ul class="mui-table-view" style="padding-top: .5rem;">
+			<li class="mui-table-view-cell">
+				<img class="mui-media-object mui-pull-left my-pull-left" src="./images/secu.png" />
+				<a href="./pages/user/convert.html" class="mui-navigate-right my-navigate-right">我的优惠卷</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<img class="mui-media-object mui-pull-left my-pull-left" src="./images/deposit.png" />
+				<a href="./pages/user/posit.html" class="mui-navigate-right my-navigate-right">提现</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<img class="mui-media-object mui-pull-left my-pull-left" src="./images/yue.png" />
+				<a href="./pages/user/detail.html" class="mui-navigate-right my-navigate-right">余额明细</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<img class="mui-media-object mui-pull-left my-pull-left" src="./images/order.png" />
+				<a href="./pages/user/order_list.html" class="mui-navigate-right my-navigate-right">我的订单</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<img class="mui-media-object mui-pull-left my-pull-left" src="./images/xiaji.png" />
+				<a href="./pages/user/lower_level.html" class="mui-navigate-right my-navigate-right">我的下级</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<img class="mui-media-object mui-pull-left my-pull-left" src="./images/addr.png" />
+				<a href="./pages/user/addr.html" class="mui-navigate-right my-navigate-right">我的地址</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<img class="mui-media-object mui-pull-left my-pull-left" src="./images/real_info.png" />
+				<a href="./pages/user/real_name.html" class="mui-navigate-right my-navigate-right">我的实名信息</a>
+			</li>
+			<li class="mui-table-view-cell">
+				<img class="mui-media-object mui-pull-left my-pull-left" src="./images/set_pass.png" />
+				<a href="./pages/user/set_pass.html" class="mui-navigate-right my-navigate-right">密码修改</a>
+			</li>
+		</ul>
+	</section>
+	<nav class="mui-bar mui-bar-tab">
+		<a class="mui-tab-item" href="index.html">
+			<img src="images/index_1@3x.png" alt="" class="fot-icon">
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" href="team.html">
+			<img src="images/team_1@3x.png" alt="" class="fot-icon">
+			<span class="mui-tab-label">团队中心</span>
+		</a>
+		<a class="mui-tab-item" href="experience.html">
+			<img src="images/shop_1@3x.png" alt="" class="fot-icon">
+			<span class="mui-tab-label">体验店</span>
+		</a>
+		<a class="mui-tab-item mui-active" href="user.html">
+			<img src="images/my_1.png" alt="" class="fot-icon">
+			<span class="mui-tab-label">个人中心</span>
+		</a>
+	</nav>
+</body>
+</html>
+<script type="text/javascript" src="lib/js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="lib/layer/layer.js"></script>
+<script>
+	var btn_close = $(".btn_close");
+	btn_close.click(function(e){
+		layer.alert("确定退出",{
+			title:"是否退出登录",
+			icon:3,
+			btn:["确定","取消"],
+
+			yes:function(e){
+				layer.msg("已退出登录");
+			}
+		})
+	});
+</script>
+<!-- <script type="text/javascript" src="lib/swiper/js/swiper.min.js"></script> -->

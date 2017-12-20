@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<title>体验店</title>
+	<link rel="stylesheet" href="css/style_h.css">
+	<script type="text/javascript" src="lib/js/rem.min.js"></script>
+	<style type="text/css" media="screen">
+		.mui-popup-button{
+			font-size: 14px;
+		}
+		.mui-popup-button:nth-child(1){
+			color: #999;
+		}
+		.mui-popup-button:nth-child(2){
+			color: #FFA300;
+		}
+	</style>
+</head>
+<body>
+	<div class="module-mian">
+		<div class="module-warp">
+			<div class="module-txt">上月</div>
+			<div class="module-txt">2017年11月</div>
+		</div>
+		<div class="particulars">
+			<div class="particulars-number">2888</div>
+			<div class="particulars-up">已售</div>
+		</div>
+		<div class="module-warp paf">
+			<div class="module-txt">体验店数量:100</div>
+			<div class="module-txt">达标体验店:100</div>
+		</div>
+	</div>
+	<div class="grade-mian">
+		<div class="grade-item">我的体验店：<span class="state not">未开通</span> <span class="dredge">开通</span>
+			<div class="fr activate">已激活分红权</div>
+		</div>
+		<div class="grade-item">本月分红资格：暂无 <button type="button">立即复销</button></div>
+		<div class="grade-btn">
+			<button type="button">体验店管理紧锣密鼓开发中...</button>
+		</div>
+	</div>
+	<div class="bonus">
+		<div class="bonus-title">体验店分红记录</div>
+		<ul>
+			<li class="module-warp">
+				<div class="module-txt">上月</div>
+				<div class="module-txt">2017年11月</div>
+			</li>
+		</ul>
+	</div>
+	<nav class="mui-bar mui-bar-tab">
+		<a class="mui-tab-item" href="index.html">
+			<img src="images/index_1@3x.png" alt="" class="fot-icon">
+			<span class="mui-tab-label">首页</span>
+		</a>
+		<a class="mui-tab-item" href="team.html">
+			<img src="images/team_1@3x.png" alt="" class="fot-icon">
+			<span class="mui-tab-label">团队中心</span>
+		</a>
+		<a class="mui-tab-item mui-active" href="javascript:;">
+			<img src="images/shop@3x.png" alt="" class="fot-icon">
+			<span class="mui-tab-label">体验店</span>
+		</a>
+		<a class="mui-tab-item" href="user.html">
+			<img src="images/mine_1@3x.png" alt="" class="fot-icon">
+			<span class="mui-tab-label">个人中心</span>
+		</a>
+	</nav>
+	<div class="save hide"></div>
+	<div class="popup hide layui-anim layui-anim-scale">
+		<div class="mui-popup-inner">
+			<div class="mui-popup-title">开通体验店</div>
+			<div class="mui-popup-text">
+				您已经申请开通体验店，平台将尽快与您取得联系，并确认相关事宜，若属实，将为您开通体验店，感谢小伙伴的辛勤付出！
+			</div>
+		</div>
+		<div class="mui-popup-buttons">
+			<span class="mui-popup-button setwin-btn">我还没准备好</span>
+			<span class="mui-popup-button">确认申请开通</span>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="lib/js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="lib/layer/layer.js"></script>
+<script type="text/javascript">
+	$(".dredge").on('click',function() {
+		$(".save,.popup").removeClass("hide")
+	})
+	$(".setwin-btn").on('click',function() {
+		$(".save,.popup").addClass("hide")
+	})
+</script>

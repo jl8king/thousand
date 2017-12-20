@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black"> 
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<title>代理注册</title>
+	<link rel="stylesheet" href="common/css/base.css">
+	<link rel="stylesheet" href="css/login.css">
+	<script type="text/javascript" src="lib/js/rem.min.js"></script>
+</head>
+<body>
+	<div class="log_content">
+		<div class="logo"><img src="images/logo@2x.png" alt=""></div>
+		<div class="form-content">
+			<div class="form-item">
+				<span class="icon"><img src="images/phone@3x.png" alt=""></span>
+				<input type="number" name="phone" placeholder="请输入手机号" maxlength="11">
+			</div>
+			<div class="form-item">
+				<span class="icon"><img src="images/verification@3x.png" alt=""></span>
+				<input type="number" name="verification" placeholder="请输入验证码">
+				<button type="button" class="verification">发送验证码</button>
+			</div>
+			<div class="form-item">
+				<span class="icon"><img src="images/password@3x.png" alt=""></span>
+				<input type="password" name="password" placeholder="设置密码">
+			</div>
+			<div class="form-item-btn">
+				<button type="button" class="register">注册</button>
+			</div>
+		</div>
+		<div class="copyright">
+			<p>四川千汇慧电子商务有限公司</p>
+			<p>备案号88888888</p>
+		</div>
+	</div>
+</body>
+</html>
+<script type="text/javascript" src="lib/js/jquery-1.11.1.js"></script>
+<script type="text/javascript" src="lib/layer/layer.js"></script>
+<script type="text/javascript" src="js/config.js"></script>
+<!-- <script type="text/javascript" src="lib/swiper/js/swiper.min.js"></script> -->
+<script type="text/javascript">
+	$(".register").on('click', function(event) {
+		var phone=$('input[name=phone]').val();
+		var verification=$('input[name=verification]').val();
+		var password=$('input[name=password]').val();
+		if (phone=='') {
+			layer.msg('请输入手机号',{icon:2});
+			return false;
+		}else if(!myUtils.is_phone(phone)){
+			layer.msg('手机号格式不正确',{icon:2});
+			return false;
+		}else if(verification==''){
+			layer.msg('请输入验证码',{icon:2});
+			return false;
+		}else if(password==''){
+			layer.msg('请设置密码',{icon:2});
+			return false;
+		}
+	});
+	var countdown=60;
+	$('.verification').on('click',function(){
+		var phone=$('input[name=phone]').val();
+		if (phone=='') {
+			layer.msg('请输入手机号',{icon:2});
+			return false;
+		}else if(!myUtils.is_phone(phone)){
+			layer.msg('手机号格式不正确',{icon:2});
+			return false;
+		}else{
+			settime()
+		}
+	})
+	function settime() {
+        if (countdown == 0) {
+            $('.verification').attr("disabled",false);
+            $('.verification').text("获取验证码");
+            countdown = 60;
+            return;
+        } else {
+            $('.verification').attr("disabled",true);
+            $('.verification').text(countdown+"s后重发");
+            countdown--;
+        }
+        setTimeout(function() {
+            settime() 
+        },1000)
+    }
+</script>
