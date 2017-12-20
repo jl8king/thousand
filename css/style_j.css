@@ -3,6 +3,9 @@
 @import url("../lib/mui/css/mui.min.css");
 @import url("../lib/swiper/css/swiper.min.css");
 
+.width100{
+    width: 100%!important;
+}
 .mui-left{
     float: left;
     width: 70%;
