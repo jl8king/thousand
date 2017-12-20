@@ -13,12 +13,19 @@
 	<script type="text/javascript" src="./lib/js/rem.min.js"></script>
 	<style>
 		.mui-table-view-cell{
-			display: block;
 			padding: 11px 15px!important;
-			white-space:nowrap;
+			white-space:nowrap!important;
 		}
-		.my-navigate-right{
-			width: 85%!important;
+		.ul_view > li{
+			display: flex;
+		}
+		.ul_view > li > a{
+			padding-left:.4rem!important;
+			flex-grow: 1;
+		}
+		.ul_view > li > a:after{
+			padding-right:.35rem!important;
+			flex-grow: 1;
 		}
 		.fot-icon {
 		    width: 22px;
@@ -71,7 +78,7 @@
 				</div>
 			</div>
 		</figure>
-		<ul class="mui-table-view" style="padding-top: .5rem;">
+		<ul class="mui-table-view ul_view" style="padding-top: .5rem;">
 			<li class="mui-table-view-cell">
 				<img class="mui-media-object mui-pull-left my-pull-left" src="./images/secu.png" />
 				<a href="./pages/user/convert.html" class="mui-navigate-right my-navigate-right">我的优惠卷</a>
