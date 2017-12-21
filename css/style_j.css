@@ -99,6 +99,7 @@
     text-align: center;
     padding: .1rem .2rem;
     display: inline-block;
+	width: 50%;
 }
 .user_state > div:first-child{
     border-right:1px solid #ccc;
